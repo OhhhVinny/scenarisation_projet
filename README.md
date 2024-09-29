@@ -29,17 +29,20 @@ graph TD
     Vue --> VueScène[Vue face à la scène]
     Vue --> VueCoulisses[Vue depuis les coulisses]
     Vue --> VueBalcon[Vue depuis le balcon]
-    VueScène --> Cote{Choisir le côté de la scène}
-    Cote --> CoteGauche[Vue côté gauche]
-    Cote --> CoteDroit[Vue côté droit]
-    CoteGauche --> Ambiance{Personnaliser l'ambiance visuelle et sonore}
-    CoteDroit --> Ambiance
+    VueScène --> Position{Choisir la position devant la scène}
+    Position --> Gauche[Vue côté gauche]
+    Position --> Centre[Vue au centre]
+    Position --> Droite[Vue côté droit]
+    Gauche --> Ambiance{Personnaliser l'ambiance visuelle et sonore}
+    Centre --> Ambiance
+    Droite --> Ambiance
     VueCoulisses --> Ambiance
     VueBalcon --> Ambiance
     Ambiance --> EffetsVisuels[Choisir les effets visuels]
     Ambiance --> Son[Modifier le son]
     EffetsVisuels --> Exploration[Continuer à explorer visuellement]
     Son --> Exploration
+
 
 ```
 
