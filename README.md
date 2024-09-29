@@ -23,31 +23,24 @@ Une expérience de concert immersive et interactive en réalité virtuelle où l
 
 Voici un schéma de l’interaction des utilisateurs avec le concert en VR :
 
-```mermaid
 graph TD
-    Start[Entrée dans le concert VR] --> Vue{Choisir un angle de vue}
-    Vue --> VueScène[Vue face à la scène]
-    Vue --> VueCoulisses[Vue depuis les coulisses]
-    Vue --> VueBalcon[Vue depuis le balcon]
+Start[Entrée dans le concert VR] --> Vue{Choisir un angle de vue}
+Vue --> VueScène[Vue face à la scène]
+Vue --> VueCoulisses[Vue depuis les coulisses]
+Vue --> VueBalcon[Vue depuis le balcon]
+VueScène --> Cote{Choisir le côté de la scène}
+Cote --> CoteGauche[Vue côté gauche]
+Cote --> CoteDroit[Vue côté droit]
+CoteGauche --> Ambiance{Personnaliser l'ambiance visuelle et sonore}
+CoteDroit --> Ambiance
+VueCoulisses --> Ambiance
+VueBalcon --> Ambiance
+Ambiance --> EffetsVisuels[Choisir les effets visuels]
+Ambiance --> Son[Modifier le son]
+EffetsVisuels --> Exploration[Continuer à explorer visuellement]
+Son --> Exploration
 
-    VueScène --> CoteScene{Choisir le côté de la scène}
-    CoteScene --> VueGauche[Vue côté gauche de la scène]
-    CoteScene --> VueDroite[Vue côté droit de la scène]
-
-    VueCoulisses --> Ambiance{Personnaliser l'ambiance visuelle et sonore}
-    VueBalcon --> Ambiance
-    VueGauche --> Ambiance
-    VueDroite --> Ambiance
-
-    Ambiance --> EffetsVisuels[Choisir les effets visuels]
-    Ambiance --> Son[Modifier le son]
-
-    EffetsVisuels --> Interaction{Interagir visuellement avec les artistes virtuels}
-    Son --> Interaction
-
-    Interaction --> Exploration[Continuer à explorer et interagir visuellement]
-
-```
+````
 
 L’utilisateur entre dans un espace de concert virtuel où il peut choisir son emplacement dans la salle (face à la scène, sur scène, au balcon, etc.). Il peut interagir avec l’environnement, choisir différents effets visuels (par exemple, des jeux de lumières ou des filtres de réalité augmentée), et même personnaliser le son (plus de basses, écho, mix audio différent).
 
@@ -104,4 +97,4 @@ graph TD
     EffetsVisuels --> Interaction{Interagir avec les artistes virtuels}
     Son --> Interaction
     Interaction --> Exploration[Continuer à explorer et interagir]
-```
+````
