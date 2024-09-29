@@ -17,36 +17,22 @@ Une expérience de concert immersive et interactive en réalité virtuelle où l
 - Utiliser les avantages de la VR pour offrir un niveau de personnalisation impossible dans un concert traditionnel.
 - Permettre aux artistes de toucher un public mondial sans les contraintes logistiques des tournées.
 
+## Ambiance
+
+**Planche visuelle** :
+![Moodboard](/medias/moodboard.jpeg)
+
 ## Scénario interactif
 
 ### Logigramme Mermaid
 
 Voici un schéma de l’interaction des utilisateurs avec le concert en VR :
 
-```mermaid
-graph TD
-    Entrée[Entrée dans le système VR] --> ChoixConcert{Choisir un concert}
-    ChoixConcert --> Vue{Choisir un angle de vue}
-    Vue --> Position{Choisir la position devant la scène}
-    Position --> Gauche[Vue côté gauche]
-    Position --> Centre[Vue au centre]
-    Position --> Droite[Vue côté droit]
-    Vue --> VueCoulisses[Vue depuis les coulisses]
-    Vue --> VueBalcon[Vue depuis le balcon]
-    Gauche --> Ambiance{Personnaliser l'ambiance visuelle et sonore}
-    Centre --> Ambiance
-    Droite --> Ambiance
-    VueCoulisses --> Ambiance
-    VueBalcon --> Ambiance
-    Ambiance --> EffetsVisuels[Choisir les effets visuels]
-    Ambiance --> Son[Modifier le son]
-    EffetsVisuels --> Exploration[Continuer à explorer visuellement]
-    Son --> Exploration
-    Exploration --> RetourMenu[Retourner au menu des concerts]
-    RetourMenu --> ChoixConcert
-```
+![Logigramme](/medias/logigramme.png)
 
-L’utilisateur entre dans un espace de concert virtuel où il peut choisir son emplacement dans la salle (face à la scène, sur scène, au balcon, etc.). Il peut interagir avec l’environnement, choisir différents effets visuels (par exemple, des jeux de lumières ou des filtres de réalité augmentée), et même personnaliser le son (plus de basses, écho, mix audio différent).
+L’utilisateur entre dans un espace de concert virtuel où il peut choisir son emplacement dans la salle (face à la scène, droite de la scène, gauche de la scène dans les coulisse ou au balcon). Il peut interagir avec l’environnement, choisir différents effets visuels (par exemple, des jeux de lumières ou des filtres de réalité augmentée), et même personnaliser le son (plus de basses, écho, mix audio différent).
+
+![Exemple du choix d'emplacement](/medias/vue_de_haut.png)
 
 ## Technologies nécessaires
 
@@ -75,10 +61,5 @@ L’utilisateur entre dans un espace de concert virtuel où il peut choisir son 
 
 | Élément            | Description                                                                                  | Exemples                                           |
 | ------------------ | -------------------------------------------------------------------------------------------- | -------------------------------------------------- |
-| Système de tickets | Gestion des achats de billets virtuels pour l’accès au concert.                              | Plateformes de vente en ligne, NFT                 |
+| Système de tickets | Gestion des achats de billets virtuels pour l’accès au concert.                              | Plateformes de vente en ligne                      |
 | Accès premium      | Options de billets avec accès à des fonctionnalités exclusives (vue spéciale, interactions). | Portails web, accès exclusifs via l'application VR |
-
-## Ambiance
-
-- **Planche visuelle** : Design inspiré des concerts futuristes avec des jeux de lumières personnalisables, des effets visuels projetés sur scène (néons, lasers, effets holographiques). Palette de couleurs fluide et ajustable selon les préférences des utilisateurs.
-- **Planche sonore** : Sons en 3D spatialisés pour que l'utilisateur puisse se sentir au cœur de l'expérience sonore, avec des options pour personnaliser les basses, les aigus ou ajouter des effets comme des échos.
