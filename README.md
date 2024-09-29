@@ -1,15 +1,15 @@
-# Projet : Concert interactif en réalité virtuelle (VR)
+# Concert interactif en réalité virtuelle
 
 ## Concept central
 
-Créer une expérience de concert immersive et interactive en réalité virtuelle où les utilisateurs peuvent assister à des performances musicales en temps réel. Chaque utilisateur peut personnaliser son expérience en choisissant l’angle de vue, en modifiant l’ambiance visuelle et sonore, et en interagissant avec les artistes virtuels. Les billets pour ces concerts sont vendus sous forme de "billets virtuels" à un coût inférieur à celui des concerts physiques.
+Une expérience de concert immersive et interactive en réalité virtuelle où les utilisateurs peuvent assister à des performances musicales en temps réel. Les billets pour ces concerts sont vendus sous forme de "billets virtuels" à un coût inférieur à celui des concerts physiques.
 
 ## Objectifs
 
 - Permettre aux utilisateurs de vivre des concerts en direct depuis n'importe quel endroit avec une immersion totale.
 - Offrir une personnalisation complète de l'expérience de concert (angle de vue, ambiance, etc.).
 - Proposer une alternative économique et accessible aux concerts physiques, avec des billets virtuels moins coûteux.
-- Créer un environnement interactif où les utilisateurs peuvent interagir avec les artistes virtuels et entre eux.
+- Créer un environnement interactif où les utilisateurs peuvent interagir avec les artistes virtuels et entre eux tel une zone de clavardage.
 
 ## Motivations
 
@@ -19,21 +19,67 @@ Créer une expérience de concert immersive et interactive en réalité virtuell
 
 ## Scénario interactif
 
+### Logigramme Mermaid
+
+Voici un schéma de l’interaction des utilisateurs avec le concert en VR :
+
+```mermaid
+graph TD
+    Start[Entrée dans le concert VR] --> Vue{Choisir un angle de vue}
+    Vue --> VueScène[Vue face à la scène]
+    Vue --> VueCoulisses[Vue depuis les coulisses]
+    Vue --> VueBalcon[Vue depuis le balcon]
+
+    VueScène --> CoteScene{Choisir le côté de la scène}
+    CoteScene --> VueGauche[Vue côté gauche de la scène]
+    CoteScene --> VueDroite[Vue côté droit de la scène]
+
+    VueCoulisses --> Ambiance{Personnaliser l'ambiance visuelle et sonore}
+    VueBalcon --> Ambiance
+    VueGauche --> Ambiance
+    VueDroite --> Ambiance
+
+    Ambiance --> EffetsVisuels[Choisir les effets visuels]
+    Ambiance --> Son[Modifier le son]
+
+    EffetsVisuels --> Interaction{Interagir visuellement avec les artistes virtuels}
+    Son --> Interaction
+
+    Interaction --> Exploration[Continuer à explorer et interagir visuellement]
+
+```
+
 L’utilisateur entre dans un espace de concert virtuel où il peut choisir son emplacement dans la salle (face à la scène, sur scène, au balcon, etc.). Il peut interagir avec l’environnement, choisir différents effets visuels (par exemple, des jeux de lumières ou des filtres de réalité augmentée), et même personnaliser le son (plus de basses, écho, mix audio différent).
-
-Des options permettent également d’interagir avec les avatars virtuels des artistes, comme lancer des animations ou déclencher des effets scéniques. Le concert est diffusé en direct, mais chaque spectateur vit une version légèrement différente en fonction de ses choix de personnalisation.
-
-## Structure interactive
-
-- **Choix de l'angle de vue** : L’utilisateur peut naviguer librement dans l’espace du concert et choisir où se positionner virtuellement (vue frontale, vue côté scène, même vue depuis les coulisses).
-- **Personnalisation de l’ambiance** : Via un menu VR, l’utilisateur peut sélectionner les effets visuels (couleurs des lumières, projections) et sonores (ajouter des réverbérations, modifier le mix audio).
-- **Interactions avec les artistes virtuels** : Les avatars des artistes réagissent à certaines actions du public, comme des acclamations ou des gestes avec les contrôleurs VR.
 
 ## Technologies nécessaires
 
-- **Support médiatique** : Captation vidéo et audio en temps réel des performances, intégration en VR via **Unreal Engine** ou **Unity**.
-- **Matériel** : Casques VR (comme l’Oculus Quest ou le HTC Vive) pour l’immersion totale. Les utilisateurs doivent aussi posséder des contrôleurs VR pour interagir avec l’environnement et les artistes.
-- **Logiciels** : Unreal Engine ou Unity pour développer l’espace du concert en 3D et gérer les interactions. Utilisation de **plugins audio** pour la personnalisation sonore en temps réel et de **systèmes de projection** pour les effets visuels.
+### Support médiatique
+
+| Élément               | Description                                                                 | Exemples             |
+| --------------------- | --------------------------------------------------------------------------- | -------------------- |
+| Captation vidéo/audio | Captation vidéo et audio en temps réel des performances, intégration en VR. | Caméras 360°, micros |
+
+### Matériel
+
+| Élément        | Description                                                                      | Exemples                   |
+| -------------- | -------------------------------------------------------------------------------- | -------------------------- |
+| Casques VR     | Appareils permettant une immersion totale dans l’univers du concert.             | Oculus Quest, HTC Vive     |
+| Contrôleurs VR | Permettent aux utilisateurs de modifier l’environnement.                         | Oculus Touch               |
+| Serveurs       | Nécessaires pour gérer la diffusion en direct et les interactions en temps réel. | Serveurs haute performance |
+
+### Logiciels
+
+| Élément                 | Description                                                          | Exemples                         |
+| ----------------------- | -------------------------------------------------------------------- | -------------------------------- |
+| Développement 3D        | Création et gestion de l’espace interactif du concert.               | Unreal Engine, Unity             |
+| Personnalisation sonore | Permet aux utilisateurs de modifier l’ambiance sonore en temps réel. | Plugins audio, spatialisation 3D |
+
+### Billetterie virtuelle
+
+| Élément            | Description                                                                                  | Exemples                                           |
+| ------------------ | -------------------------------------------------------------------------------------------- | -------------------------------------------------- |
+| Système de tickets | Gestion des achats de billets virtuels pour l’accès au concert.                              | Plateformes de vente en ligne, NFT                 |
+| Accès premium      | Options de billets avec accès à des fonctionnalités exclusives (vue spéciale, interactions). | Portails web, accès exclusifs via l'application VR |
 
 ## Ambiance
 
@@ -58,7 +104,4 @@ graph TD
     EffetsVisuels --> Interaction{Interagir avec les artistes virtuels}
     Son --> Interaction
     Interaction --> Exploration[Continuer à explorer et interagir]
-
-
-
 ```
