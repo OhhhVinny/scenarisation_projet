@@ -25,14 +25,14 @@ Voici un schéma de l’interaction des utilisateurs avec le concert en VR :
 
 ```mermaid
 graph TD
-    Start[Entrée dans le concert VR] --> Vue{Choisir un angle de vue}
-    Vue --> VueScène[Vue face à la scène]
-    Vue --> VueCoulisses[Vue depuis les coulisses]
-    Vue --> VueBalcon[Vue depuis le balcon]
-    VueScène --> Position{Choisir la position devant la scène}
+    Entrée[Entrée dans le système VR] --> ChoixConcert{Choisir un concert}
+    ChoixConcert --> Vue{Choisir un angle de vue}
+    Vue --> Position{Choisir la position devant la scène}
     Position --> Gauche[Vue côté gauche]
     Position --> Centre[Vue au centre]
     Position --> Droite[Vue côté droit]
+    Vue --> VueCoulisses[Vue depuis les coulisses]
+    Vue --> VueBalcon[Vue depuis le balcon]
     Gauche --> Ambiance{Personnaliser l'ambiance visuelle et sonore}
     Centre --> Ambiance
     Droite --> Ambiance
@@ -42,8 +42,8 @@ graph TD
     Ambiance --> Son[Modifier le son]
     EffetsVisuels --> Exploration[Continuer à explorer visuellement]
     Son --> Exploration
-
-
+    Exploration --> RetourMenu[Retourner au menu des concerts]
+    RetourMenu --> ChoixConcert
 ```
 
 L’utilisateur entre dans un espace de concert virtuel où il peut choisir son emplacement dans la salle (face à la scène, sur scène, au balcon, etc.). Il peut interagir avec l’environnement, choisir différents effets visuels (par exemple, des jeux de lumières ou des filtres de réalité augmentée), et même personnaliser le son (plus de basses, écho, mix audio différent).
