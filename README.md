@@ -1,4 +1,4 @@
-# VRconcert
+# ConcertRV
 
 ## Concept central
 
@@ -20,6 +20,7 @@ Une expérience de concert immersive et interactive en réalité virtuelle où l
 ## Ambiance
 
 **Planche visuelle** :
+
 ![Moodboard](/medias/moodboard.jpeg)
 
 ## Scénario interactif
