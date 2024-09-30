@@ -1,4 +1,4 @@
-# Concert interactif en réalité virtuelle
+# VRconcert
 
 ## Concept central
 
