@@ -64,3 +64,7 @@ L’utilisateur entre dans un espace de concert virtuel où il peut choisir son 
 | ------------------ | -------------------------------------------------------------------------------------------- | -------------------------------------------------- |
 | Système de tickets | Gestion des achats de billets virtuels pour l’accès au concert.                              | Plateformes de vente en ligne                      |
 | Accès premium      | Options de billets avec accès à des fonctionnalités exclusives (vue spéciale, interactions). | Portails web, accès exclusifs via l'application VR |
+
+### Références
+
+Images: [Adobe Stocks](https://stock.adobe.com/);
