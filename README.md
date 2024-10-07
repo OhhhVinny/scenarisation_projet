@@ -67,4 +67,4 @@ L’utilisateur entre dans un espace de concert virtuel où il peut choisir son 
 
 ### Références
 
-Images: [Adobe Stocks](https://stock.adobe.com/);
+Images: [Adobe Stocks](https://stock.adobe.com/)
